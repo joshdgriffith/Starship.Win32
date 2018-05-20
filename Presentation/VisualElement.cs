@@ -1,4 +1,5 @@
-﻿using Starship.Core.ChangeTracking;
+﻿using System;
+using Starship.Core.ChangeTracking;
 
 namespace Starship.Win32.Presentation {
     public abstract class VisualElement : ChangeTrackedObject {
@@ -19,6 +20,8 @@ namespace Starship.Win32.Presentation {
 
         protected virtual void OnSelectionChanged() {
         }
+
+        public Guid Id { get; set; }
 
         public string Name { get; set; }
 

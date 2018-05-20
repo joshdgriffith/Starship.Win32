@@ -51,6 +51,9 @@ namespace Starship.Win32 {
         [DllImport("user32.dll", SetLastError = true)]
         public static extern IntPtr SetParent(IntPtr hWndChild, IntPtr hWndNewParent);
 
+        [DllImport("user32.dll", SetLastError = true)]
+        public static extern IntPtr ShowWindow(IntPtr hWnd, int flag);
+
         static readonly int HWND_BOTTOM = 1;
 
         const short SWP_NOMOVE = 0X2;
